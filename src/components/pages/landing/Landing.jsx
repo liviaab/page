@@ -14,7 +14,7 @@ class Landing extends Component {
         </div>
 
         <div className="round-image">
-          <img src={liviaPhoto} alt="Photo of Livia" className="round" />
+          <img src={liviaPhoto} alt="Livia" className="round" />
           {/*https://www.pexels.com/*/}
         </div>
 
