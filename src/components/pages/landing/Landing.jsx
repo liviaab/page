@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { FaFacebookSquare as FacebookIcon,
+import {
+  FaFacebookSquare as FacebookIcon,
   FaGithub as GithubIcon,
   FaLinkedin as LinkedinIcon
  } from "react-icons/fa";
+import { MdAdd as PlusIcon } from "react-icons/md"
 import './Landing.scss'
 import liviaPhoto from '../../../assets/images/me.jpg'
 
@@ -27,9 +29,25 @@ class Landing extends Component {
              Jogadora de vôlei nas horas vagas :)
           </div>
           <div className="contacts">
-            <GithubIcon color="#3B3D40" size="2em" />
-            <LinkedinIcon color="#3B3D40" size="2em" />
-            <FacebookIcon color="#3B3D40" size="2em" />
+            <a
+              href="https://github.com/liviaab"
+              target="_blank"
+              rel="noopener noreferrer">
+              <GithubIcon color="#3B3D40" size="2em" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/liviaab/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <LinkedinIcon color="#3B3D40" size="2em" />
+            </a>
+            <a
+              href="https://www.facebook.com/liviaalmeidab"
+              target="_blank"
+              rel="noopener noreferrer">
+              <FacebookIcon color="#3B3D40" size="2em" />
+            </a>
+            <PlusIcon color="#3B3D40" size="2em" />
           </div>
         </div>
       </div>

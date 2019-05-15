@@ -11,9 +11,9 @@ const withMainTemplate = (component, props) =>  (
 
 const Routes = () => (
     <Switch>
-        <Route exact path="/" component={props => withMainTemplate(<Landing {...props} />)} />
-        // <Route exact path="/projects" component={props => withMainTemplate(<Projects {...props} />)} />
-        // <Route exact path="/extras" component={props => withMainTemplate(<Extras {...props} />)} />
+        <Route exact path="/" component={props => <Landing {...props} />} />
+        {/* <Route exact path="/projects" component={props => withMainTemplate(<Projects {...props} />)} /> */}
+        {/* <Route exact path="/extras" component={props => withMainTemplate(<Extras {...props} />)} /> */}
     </Switch>
 )
 
