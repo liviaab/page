@@ -69,16 +69,10 @@
 
     >.contacts {
       @include flex-display($justify-content: space-evenly);
+      width: 30%;
+
       @include respond-below(sm) {
         width: 50%;
-      }
-
-      @include respond-between(sm, md){
-        width: 30%;
-      }
-
-      @include respond-above(md){
-        width: 30%;
       }
     }
   }
