@@ -5,18 +5,19 @@ import {
   FaLinkedin as LinkedinIcon
  } from "react-icons/fa";
 import { MdAdd as PlusIcon } from "react-icons/md"
+import { Link } from "react-router-dom"
 import './Landing.scss'
 import liviaPhoto from '../../../assets/images/me.jpg'
 
 class Landing extends Component {
   render() {
     return(
-      <div id="landing">
+      <div class="landing">
         <div className="header">
         </div>
 
         <div className="round-image">
-          <img src={liviaPhoto} alt="Livia" className="round" />
+          <img src={liviaPhoto} alt="Livia" className="round-border" />
           {/*https://www.pexels.com/*/}
         </div>
 
@@ -47,7 +48,7 @@ class Landing extends Component {
               rel="noopener noreferrer">
               <FacebookIcon color="#3B3D40" size="2em" />
             </a>
-            <PlusIcon color="#3B3D40" size="2em" />
+            <Link to="/"><PlusIcon color="#3B3D40" size="2em" /></Link>
           </div>
         </div>
       </div>
