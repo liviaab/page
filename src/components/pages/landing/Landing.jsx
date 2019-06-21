@@ -12,9 +12,8 @@ import liviaPhoto from '../../../assets/images/me.jpg'
 class Landing extends Component {
   render() {
     return(
-      <div class="landing">
-        <div className="header">
-        </div>
+      <div className="landing">
+        <div className="header" />
 
         <div className="round-image">
           <img src={liviaPhoto} alt="Livia" className="round-border" />
@@ -48,7 +47,7 @@ class Landing extends Component {
               rel="noopener noreferrer">
               <FacebookIcon color="#3B3D40" size="2em" />
             </a>
-            <Link to="/"><PlusIcon color="#3B3D40" size="2em" /></Link>
+            <Link to="/projects"><PlusIcon color="#3B3D40" size="2em" /></Link>
           </div>
         </div>
       </div>
