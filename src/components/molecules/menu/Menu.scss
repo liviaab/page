@@ -2,46 +2,76 @@
 @import "../../../assets/stylesheets/mixins.scss";
 @import "../../../assets/stylesheets/media_queries.scss";
 
-.main-menu__wrapper {
-  background-color: $color-hit-pink;
+
+.side-bar-menu {
+  border-radius: 0 0 5px  5px ;
 
   @include respond-below(sm) {
-    width: 100%;
-    height: 50px;
     @include flex-display($flex-flow: row nowrap);
-    border-radius: 0 0 5px  5px ;
+    width: 100%;
+    height: 10vh;
+    min-height: 30px;
   }
 
   @include respond-between(sm, md) {
-    width: 100%;
-    height: 80px;
     @include flex-display($flex-flow: row nowrap);
-    border-radius: 0 0 5px  5px ;
+    width: 100%;
+    height: 20vh;
   }
 
   @include respond-above(md) {
-    width: 10vw;
+    width: 25%;
     height: 100vh;
-    position: absolute;
     border-radius: 0 5px 5px 0;
   }
 
-  .menu-item__wrapper {
-    width: 100%;
+  .side-bar-menu__nav {
     height: 100%;
-    @include flex-display($flex-flow: column);
+    width: 100%;
 
     @include respond-above(md) {
-      height: 25%;
-      flex-flow: row nowrap;
+      height: 100vh;
     }
 
-    .menu-item__content {
-      @include flex-display();
+    .main-menu__wrapper {
+      @include flex-display($flex-flow: row nowrap);
+      background-color: $color-manhattan;
+      list-style: none;
+      height: 100%;
+      width: 100%;
 
       @include respond-above(md) {
-        flex-flow: column;
+        @include flex-display($flex-flow: column nowrap);
       }
+
+      .menu-item__wrapper {
+        @include flex-display($flex-flow: column);
+        width: 100%;
+        height: 100%;
+
+        @include respond-above(md) {
+          height: 25%;
+          flex-flow: row nowrap;
+          border-bottom: 2px solid linear-gradient(to right, #9DB4C0, #ffffff);
+        }
+
+        .menu-item__content {
+          @include flex-display();
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.1em;
+
+          @include respond-between(sm, md) {
+            letter-spacing: 0.25em;
+          }
+
+          @include respond-above(md) {
+            letter-spacing: 0.4em;
+            font-weight: bold;
+          }
+        }
+      }
+
     }
   }
 }

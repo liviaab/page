@@ -1,5 +1,6 @@
 @import "../../../assets/stylesheets/colors.scss";
 @import "../../../assets/stylesheets/media_queries.scss";
+@import "../../../assets/stylesheets/mixins.scss";
 
 * {
   margin: 0;
@@ -14,15 +15,25 @@ a, a:visited, a:active, a:hover, a:hover {
 .main-template{
   background-color: $color-white;
 
+  @include respond-above(md) {
+    @include flex-display($flex-flow: row nowrap, $justify-content: flex-start);
+  }
+
   &__content-wrapper {
     width: 100%;
-    height: 100%;
-    position: fixed;
+    list-style: none;
+
+    @include respond-below(sm) {
+      height: 90vh;
+      min-height: 500px;
+    }
+
+    @include respond-between(sm, md){
+      height: 80vh;
+    }
 
     @include respond-above(md) {
-      height: 100vh;
-      width: 90vw;
-      right: 0;
+      height: 100%;
     }
 
     .main-template__content {
