@@ -5,19 +5,10 @@
 
 .side-bar-menu {
   border-radius: 0 0 5px  5px ;
-
-  @include respond-below(sm) {
-    @include flex-display($flex-flow: row nowrap);
-    width: 100%;
-    height: 10vh;
-    min-height: 30px;
-  }
-
-  @include respond-between(sm, md) {
-    @include flex-display($flex-flow: row nowrap);
-    width: 100%;
-    height: 20vh;
-  }
+  @include flex-display($flex-flow: row nowrap);
+  width: 100%;
+  height: 10vh;
+  min-height: 30px;
 
   @include respond-above(md) {
     width: 25%;
@@ -35,7 +26,6 @@
 
     .main-menu__wrapper {
       @include flex-display($flex-flow: row nowrap);
-      background-color: $color-manhattan;
       list-style: none;
       height: 100%;
       width: 100%;
@@ -48,26 +38,39 @@
         @include flex-display($flex-flow: column);
         width: 100%;
         height: 100%;
+        background-image: linear-gradient(
+          to bottom, $color-nevada, $color-loblolly);
 
         @include respond-above(md) {
           height: 25%;
           flex-flow: row nowrap;
-          border-bottom: 2px solid linear-gradient(to right, #9DB4C0, #ffffff);
+          background-image: linear-gradient(
+            to right, $color-nevada, $color-loblolly);
         }
 
         .menu-item__content {
+          background-color: $color-tuft-bush;
+          height: 100%;
+          width: 98%;
+
           @include flex-display();
-          text-transform: uppercase;
+          text-transform: lowercase;
           text-decoration: none;
           letter-spacing: 0.1em;
 
+
           @include respond-between(sm, md) {
             letter-spacing: 0.25em;
+            text-transform: uppercase;
           }
 
           @include respond-above(md) {
+            // background-color: $color-manhattan;
+            text-transform: uppercase;
             letter-spacing: 0.4em;
             font-weight: bold;
+            height: 98%;
+            width: 100%;
           }
         }
       }
