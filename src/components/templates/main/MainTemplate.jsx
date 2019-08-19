@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Menu from '../../molecules'
+import React from 'react'
+import { Menu } from '../../molecules'
 import './MainTemplate.scss'
 
 const MainTemplate = ({ children }) => (
