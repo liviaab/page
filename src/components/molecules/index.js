@@ -1,3 +1,4 @@
+import Card from './card/Card'
 import Menu from './menu/Menu'
 
-export default Menu
+export { Card, Menu }
