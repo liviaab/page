@@ -17,6 +17,8 @@
   }
 
   .side-bar-menu__nav {
+    @include flex-display($flex-flow: column);
+    background-color: $color-tuft-bush;
     height: 100%;
     width: 100%;
 
@@ -32,22 +34,25 @@
 
       @include respond-above(md) {
         @include flex-display($flex-flow: column nowrap);
+        height: 50%;
       }
 
       .menu-item__wrapper {
         @include flex-display($flex-flow: column);
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(
-          to bottom, $color-nevada, $color-loblolly);
+        border-right: 1px solid #CAD3D8;
 
         @include respond-above(md) {
           height: 25%;
           flex-flow: row nowrap;
-          background-image: linear-gradient(
-            to right, $color-nevada, $color-loblolly);
+          border: none;
+          border-bottom: 1px solid #CAD3D8;
         }
 
+        &:last-child {
+          border: none;
+        }
         .menu-item__content {
           background-color: $color-tuft-bush;
           height: 100%;
@@ -65,7 +70,6 @@
           }
 
           @include respond-above(md) {
-            // background-color: $color-manhattan;
             text-transform: uppercase;
             letter-spacing: 0.4em;
             font-weight: bold;
@@ -74,7 +78,6 @@
           }
         }
       }
-
     }
   }
 }
