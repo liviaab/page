@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card } from '../../molecules'
-import vhdLogo from '../../../assets/images/vhd.png'
 import './Talks.scss'
 
 const Talks = () =>

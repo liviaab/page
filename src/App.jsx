@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Routes from './Routes'
 
 const App = () => (
-  <BrowserRouter basename="/page" >
+  <BrowserRouter basename={process.env.PUBLIC_URL} >
     <Routes />
   </BrowserRouter>
 )
