@@ -1,11 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Menu.scss'
 
 const labels = ['Projetos', 'Talks', 'Sobre', 'Extras']
 const paths = [
-  `${process.env.PUBLIC_URL}/projects`,
-  `${process.env.PUBLIC_URL}/talks`,
-  '/about', '/extras']
+  '/projects', '/talks', '/about', '/extras']
 
 const Menu = () => (
   <aside className="side-bar-menu">
@@ -13,12 +12,12 @@ const Menu = () => (
       <ul className="main-menu__wrapper">
         {labels.map((label, index) => (
         <li className="menu-item__wrapper" key={label}>
-          <a
+          <Link
+            to={paths[index]}
             className="menu-item__content"
-            href={paths[index]}
           >
             {label}
-          </a>
+          </Link>
         </li>
         ))}
       </ul>
