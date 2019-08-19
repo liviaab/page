@@ -11,9 +11,10 @@
   min-height: 30px;
 
   @include respond-above(md) {
-    width: 25%;
+    width: 20%;
     height: 100vh;
     border-radius: 0 5px 5px 0;
+    position: fixed;
   }
 
   .side-bar-menu__nav {
