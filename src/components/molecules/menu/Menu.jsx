@@ -2,7 +2,10 @@ import React from 'react'
 import './Menu.scss'
 
 const labels = ['Projetos', 'Talks', 'Sobre', 'Extras']
-const paths = ['/projects', '/talks', '/about', '/extras']
+const paths = [
+  `${process.env.PUBLIC_URL}/projects`,
+  `${process.env.PUBLIC_URL}/talks`,
+  '/about', '/extras']
 
 const Menu = () => (
   <aside className="side-bar-menu">
