@@ -1,7 +1,15 @@
 
 **Hi! :)**
 
-This is my personal website project. I'm trying to learn more about React, mobile-first and responsive design. I used  [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
+This is my personal website project and it was created using [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
+
+I am trying to learn more about React, mobile-first and responsive design. For example, I am making the styles work for different screen sizes but it does not work for all the orientations yet. I am also using Sass and CSS modules to take advantage of several things they can give to us as variables, mixins, media queries and scoped classes.
+
+I am using the [Atomic Design](https://github.com/danilowoz/react-atomic-design) to build the pages and components because it is a great method to organize the project
+
+There are no tests for the components because most of them have no behavior.
+
+## Running
 
 In the project directory, you can use yarn scripts to start, test, build and deploy the project:
 
