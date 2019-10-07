@@ -1,3 +1,4 @@
+import Contacts from './contacts/Contacts'
 import Presentation from './presentation/Presentation'
 
-export { Presentation }
+export { Contacts, Presentation }

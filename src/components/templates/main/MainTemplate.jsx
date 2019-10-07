@@ -6,7 +6,7 @@ import sideBarStyle from '../../organisms/presentation/SidePresentation.module.s
 const MainTemplate = ({ children }) => (
   <div className='main-template'>
     <div className="sidebar-presentation">
-      <Presentation style={sideBarStyle} />
+      <Presentation style={sideBarStyle} isSidePresentation/>
     </div>
     <div className="main-template__content-wrapper">
       <div className="main-template__content">

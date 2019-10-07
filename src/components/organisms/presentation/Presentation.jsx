@@ -1,13 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import {
-  FaFacebookSquare as FacebookIcon,
-  FaGithub as GithubIcon,
-  FaLinkedin as LinkedinIcon
-} from 'react-icons/fa';
-import { MdAdd as PlusIcon } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import liviaPhoto from '../../../assets/images/me.jpg'
+import { Contacts } from '../'
 
 class Presentation extends Component {
   renderHeader = () => {
@@ -49,30 +44,14 @@ class Presentation extends Component {
           </Link>
         </div>
         <br />
-        <div className={style.identification}>Lívia Almeida Barbosa</div>
+        <Link to={process.env.PUBLIC_URL}>
+          <div className={style.identification}>Lívia Almeida Barbosa</div>
+        </Link>
         <br/>
         {this.renderDescription()}
         <br />
         <div className={style.contacts}>
-          <a
-            href="https://github.com/liviaab"
-            target="_blank"
-            rel="noopener noreferrer">
-            <GithubIcon color="#3B3D40" size="2em" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/liviaab/"
-            target="_blank"
-            rel="noopener noreferrer">
-            <LinkedinIcon color="#3B3D40" size="2em" />
-          </a>
-          <a
-            href="https://www.facebook.com/liviaalmeidab"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FacebookIcon color="#3B3D40" size="2em" />
-          </a>
-          <Link to="/projects"><PlusIcon color="#3B3D40" size="2em" /></Link>
+          <Contacts showPlusIcon={!this.props.isSidePresentation} />
         </div>
         <br />
       </Fragment>
@@ -81,7 +60,12 @@ class Presentation extends Component {
 }
 
 Presentation.propTypes = {
-  style: PropTypes.bool.isRequired
+  style: PropTypes.string.isRequired,
+  isSidePresentation: PropTypes.bool
+}
+
+Presentation.defaultProps = {
+  isSidePresentation: false
 }
 
 export default Presentation
