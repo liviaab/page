@@ -9,7 +9,11 @@
 .round_image {
   margin: 0 auto ;
   width: 150px;
-  height: 150px;
+
+  @include respond-below(md) {
+    width: 80px;
+    display: none;
+  }
 
   .round_border {
     border-radius: 50%;
@@ -20,13 +24,25 @@
 .identification {
   margin: 30px auto;
   font-size: larger;
-  font-weight: bold
+  font-weight: bold;
+
+  @include respond-below(md) {
+    padding: 0 10px;
+  }
 }
 
 .description {
   margin: 20px;
+
+  @include respond-below(md) {
+    display: none;
+  }
 }
 
 .contacts {
   @include flex-display($justify-content: space-evenly, $flex-flow: row);
+
+  @include respond-below(md) {
+    flex-flow: column;
+  }
 }
