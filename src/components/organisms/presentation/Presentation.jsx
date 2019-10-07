@@ -1,34 +1,58 @@
-import React, { Fragment } from 'react'
-// import PropTypes from 'prop-types'
+import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import {
   FaFacebookSquare as FacebookIcon,
   FaGithub as GithubIcon,
   FaLinkedin as LinkedinIcon
- } from "react-icons/fa";
-import { MdAdd as PlusIcon } from "react-icons/md"
-import { Link } from "react-router-dom"
-import style from './Presentation.module.scss'
+} from 'react-icons/fa';
+import { MdAdd as PlusIcon } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 import liviaPhoto from '../../../assets/images/me.jpg'
 
-const Presentation = () => (
-  <Fragment>
-      <div className={style.header} />
+class Presentation extends Component {
+  renderHeader = () => {
+    if(!this.props.isSidePresentation) {
+      return <div className={this.props.style.header} />
+    }
+  }
 
-      <div className={style.round_image}>
-        <Link to={process.env.PUBLIC_URL}>
-          <img src={liviaPhoto} alt="Foto da Livia" className={style.round_border} />
-        </Link>
-        {/*https://www.pexels.com/*/}
-      </div>
+  renderDescription = () => {
+    const { style } = this.props
 
-      <div className={style.information}>
-        <div className={style.identification}>Lívia Almeida Barbosa</div>
+    if(this.props.isSidePresentation) {
+      return (
         <div className={style.description}>
-          Graduada em Ciência da Computação pela UFMG,
-           desenvolvedora full-stack que quer se desafiar cada vez mais a sair da zona de conforto.
-           <br />
-           Jogadora de vôlei nas horas vagas :)
+          Desenvolvedora full-stack, não muito fã de café e jogadora de vôlei nas horas vagas :)
         </div>
+      )
+    }
+
+    return (
+      <div className={style.description}>
+        Graduada em Ciência da Computação pela UFMG,desenvolvedora full-stack que
+        quer se desafiar cada vez mais a sair da zona de conforto.
+        <br />
+        Jogadora de vôlei nas horas vagas :)
+      </div>
+    )
+  }
+
+  render() {
+    const { style } = this.props
+
+    return (
+      <Fragment>
+        {this.renderHeader()}
+        <div className={style.round_image}>
+          <Link to={process.env.PUBLIC_URL}>
+            <img src={liviaPhoto} alt="Foto da Livia" className={style.round_border} />
+          </Link>
+        </div>
+        <br />
+        <div className={style.identification}>Lívia Almeida Barbosa</div>
+        <br/>
+        {this.renderDescription()}
+        <br />
         <div className={style.contacts}>
           <a
             href="https://github.com/liviaab"
@@ -50,8 +74,14 @@ const Presentation = () => (
           </a>
           <Link to="/projects"><PlusIcon color="#3B3D40" size="2em" /></Link>
         </div>
-    </div>
-  </Fragment>
-)
+        <br />
+      </Fragment>
+    )
+  }
+}
+
+Presentation.propTypes = {
+  style: PropTypes.bool.isRequired
+}
 
 export default Presentation

@@ -4,6 +4,7 @@
 
 .header {
   background: url("../../../assets/images/pexels-photo-949587.jpeg") no-repeat center;
+  /*https://www.pexels.com/*/
   width: 100%;
 
   @include respond-below(sm) {
@@ -20,55 +21,34 @@
 }
 
 .round_image {
-  margin: auto;
+  width: 20%;
+
+  @include respond-below(md) {
+    width: 40%;
+  }
 
   .round_border {
     border-radius: 50%;
     margin-top: -50%;
     border: 5px solid $color-white;
   }
-
-  @include respond-below(sm) {
-    width: 40%;
-    height: 40%;
-  }
-
-  @include respond-between(sm, md){
-    width: 25%;
-    height: 25%;
-  }
-
-  @include respond-above(md){
-    width: 20%;
-    height: 20%;
-  }
 }
 
-.information {
-    text-align: center;
-    margin: 5vh;
-    @include flex-display($flex-flow: column);
+.identification, .description {
+  text-align: center;
+  margin: 0 20vw;
+}
 
-    >.description {
-      @include respond-below(sm) {
-        margin: 10% 5%;
-      }
+.identification {
+  font-size: larger;
+  font-weight: bold;
+}
 
-      @include respond-between(sm, md){
-        margin: 10% 10%;
-      }
+.contacts {
+  @include flex-display($justify-content: space-evenly);
+  width: 30%;
 
-      @include respond-above(md){
-        margin: 5% 20%;
-      }
-    }
-
-    >.contacts {
-      @include flex-display($justify-content: space-evenly);
-      width: 30%;
-
-      @include respond-below(sm) {
-        width: 50%;
-      }
-    }
+  @include respond-below(sm) {
+    width: 50%;
   }
+}

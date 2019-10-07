@@ -1,0 +1,32 @@
+@import "../../../assets/stylesheets/colors.scss";
+@import "../../../assets/stylesheets/media_queries.scss";
+@import "../../../assets/stylesheets/mixins.scss";
+
+.header {
+  display: none;
+}
+
+.round_image {
+  margin: 0 auto ;
+  width: 150px;
+  height: 150px;
+
+  .round_border {
+    border-radius: 50%;
+    border: 3px solid $color-white;
+  }
+}
+
+.identification {
+  margin: 30px auto;
+  font-size: larger;
+  font-weight: bold
+}
+
+.description {
+  margin: 20px;
+}
+
+.contacts {
+  @include flex-display($justify-content: space-evenly, $flex-flow: row);
+}

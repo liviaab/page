@@ -5,75 +5,8 @@
 .landing {
   width: 100%;
   height: 100%;
-
-  >.header {
-    background: url("../../../assets/images/pexels-photo-949587.jpeg") no-repeat center;
-    width: 100%;
-
-    @include respond-below(sm) {
-      height: 30vh;
-    }
-
-    @include respond-between(sm, md){
-      height: 25vh;
-    }
-
-    @include respond-above(md){
-      height: 25vh;
-    }
-  }
-
-  >.round-image {
-    margin: auto;
-
-    >.round-border {
-      border-radius: 50%;
-      margin-top: -50%;
-      border: 5px solid $color-white;
-    }
-
-    @include respond-below(sm) {
-      width: 40%;
-      height: 40%;
-    }
-
-    @include respond-between(sm, md){
-      width: 25%;
-      height: 25%;
-    }
-
-    @include respond-above(md){
-      width: 20%;
-      height: 20%;
-    }
-  }
-
-  >.information {
-    text-align: center;
-    margin: 5vh;
-    @include flex-display($flex-flow: column);
-
-    >.description {
-      @include respond-below(sm) {
-        margin: 10% 5%;
-      }
-
-      @include respond-between(sm, md){
-        margin: 10% 10%;
-      }
-
-      @include respond-above(md){
-        margin: 5% 20%;
-      }
-    }
-
-    >.contacts {
-      @include flex-display($justify-content: space-evenly);
-      width: 30%;
-
-      @include respond-below(sm) {
-        width: 50%;
-      }
-    }
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
