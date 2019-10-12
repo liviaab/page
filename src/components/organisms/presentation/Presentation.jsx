@@ -39,12 +39,12 @@ class Presentation extends Component {
       <Fragment>
         {this.renderHeader()}
         <div className={style.round_image}>
-          <Link to={process.env.PUBLIC_URL}>
+          <Link to="/">
             <img src={liviaPhoto} alt="Foto da Livia" className={style.round_border} />
           </Link>
         </div>
         <br />
-        <Link to={process.env.PUBLIC_URL}>
+        <Link to="/">
           <div className={style.identification}>Lívia Almeida Barbosa</div>
         </Link>
         <br/>
