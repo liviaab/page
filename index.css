@@ -66,12 +66,16 @@ footer {
   text-transform: uppercase;
 }
 
+figcaption {
+  margin-top: 5vh;
+}
+
 .presentation_photo {
   width: 25vw;
   height: auto;
 }
 
-.presentation_minibio {
+.centralized_content {
   width: 50vw;
   margin: auto;
 }
